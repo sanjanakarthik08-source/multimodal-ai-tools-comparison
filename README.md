@@ -1,3 +1,15 @@
+Multimodal AI Tools Comparison
+
+Capstone 57 — How can multimodal AI tools be compared for different tasks?
+
+Details	Information
+Student	SANJANA K B
+Register No.	410725104071
+Year / Section	II Year – CSE (B)
+Project	Multimodal AI Tools Comparison
+Repository	View on GitHub
+
+
 # CAPSTONE 57 Flask Project
 
 ## Structure
