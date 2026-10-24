@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}Record Test | CAPSTONE 57{% endblock %}{% block content %}
+<section><small>EXPERIMENT LOG</small><h2>Record a test result</h2><p>For untested or unavailable features, choose the relevant status. Scores are required only for completed tests.</p></section>
+<form class="formbox" method="post">
+<div class="grid"><label>Task<select name="task_id">{% for t in tasks %}<option value="{{t[0]}}" {% if t[0]==selected[0] %}selected{% endif %}>{{t[0]}} — {{t[1]}}</option>{% endfor %}</select></label>
+<label>AI tool<select name="tool">{% for tool in tools %}<option>{{tool}}</option>{% endfor %}</select></label>
+<label>Testing date/time<input type="datetime-local" name="tested_at" value="{{now}}"></label>
+<label>Model/version if visible<input name="model_version" placeholder="Optional"></label>
+<label>Modality<select name="modality"><option>{{selected[2]}}</option><option>Image</option><option>Document</option><option>Audio</option><option>Text + sources</option><option>Web/source</option><option>Any</option></select></label>
+<label>Feature status<select name="status" id="status"><option>Tested</option><option>Feature unavailable</option><option>Input rejected / limit reached</option></select></label></div>
+<label>Exact prompt<textarea name="prompt" required rows="3">{{selected[3]}}</textarea></label>
+<label>Output summary<textarea name="output_summary" rows="3" placeholder="Brief summary of actual output"></textarea></label>
+<label>Evidence URL (optional)<input type="url" name="evidence_url" placeholder="https://..."></label>
+<div id="scorebox"><h3>Six scores (0–5)</h3><div class="grid scores">{% for key,label in criteria %}<label>{{label}}<input type="number" name="{{key}}" min="0" max="5" step="0.5" value="3"></label>{% endfor %}</div></div>
+<label>Error notes and verification evidence<textarea name="error_notes" rows="3" placeholder="Errors, omissions, source checks and reasoning"></textarea></label>
+<button class="btn" type="submit">Save test record</button></form>
+<script>const s=document.getElementById('status'), box=document.getElementById('scorebox');function toggle(){box.hidden=s.value!=='Tested';box.querySelectorAll('input').forEach(i=>i.required=s.value==='Tested')}s.addEventListener('change',toggle);toggle();</script>
+{% endblock %}

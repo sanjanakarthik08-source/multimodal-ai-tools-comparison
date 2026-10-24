@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block title %}Tasks | CAPSTONE 57{% endblock %}{% block content %}
+<section><small>STANDARDIZED TEST SET</small><h2>15 Multimodal Study Tasks</h2><p>Prepare a reference answer, then use identical inputs and prompts wherever possible.</p></section>
+{% for t in tasks %}<article class="task"><div class="taskid">{{t[0]}}</div><div><small>{{t[2]}}</small><h3>{{t[1]}}</h3><p>{{t[3]}}</p><a href="/record?task_id={{t[0]}}">Record this task →</a></div></article>{% endfor %}{% endblock %}

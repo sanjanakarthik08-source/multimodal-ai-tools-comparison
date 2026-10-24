@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}CAPSTONE 57{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><header><div class="wrap"><small>CAPSTONE 57</small><h1>Multimodal AI Tools Comparison</h1><p>For Students · Images · Documents · Audio</p></div></header>
+<nav><a href="/">Dashboard</a><a href="/tasks">15 Tasks</a><a href="/record">Record Test</a><a href="/results">Results</a><a href="/prompts">Prompt Library</a><a href="/checklist">Checklist</a><a href="/quiz">Quiz</a><a href="/about">About</a></nav>
+<main class="wrap">{% with messages=get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<div class="flash {{category}}">{{message}}</div>{% endfor %}{% endwith %}{% block content %}{% endblock %}</main>
+<footer>College research project · Verify outputs · Record actual results</footer></body></html>
