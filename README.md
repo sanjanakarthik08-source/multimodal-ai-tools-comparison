@@ -2,41 +2,57 @@ Multimodal AI Tools Comparison
 
 Capstone 57 — How can multimodal AI tools be compared for different tasks?
 
+A Flask-based project for exploring and comparing multimodal AI tools for different tasks.
+
 Details	Information
 Student	SANJANA K B
 Register No.	410725104071
 Year / Section	II Year – CSE (B)
 Project	Multimodal AI Tools Comparison
 Repository	View on GitHub
+Features
+Flask-based web application
+Multimodal AI tools comparison
+User-friendly interface
+Quick Start
+Requirements
+Python
+Dependencies listed in requirements.txt
+1. Clone the repository
+bash
+git clone YOUR_REPOSITORY_CLONE_URL
+
+2. Open the project folder
+bash
+cd multimodal-ai-tools-comparison
+
+3. Install dependencies
+bash
+pip install -r requirements.txt
+
+4. Run the application
+bash
+python app.py
 
 
-# CAPSTONE 57 Flask Project
+Open http://127.0.0.1:5000/ in your browser.
 
-## Structure
-- `app.py`: Flask routes, SQLite database, scoring, task set and quiz
-- `templates/`: HTML pages
-- `static/style.css`: website styling
-- `requirements.txt`: dependency list
-- `capstone57.db`: created automatically when the app first runs
+Project Structure
+text
+multimodal-ai-tools-comparison/
+├── static/
+├── templates/
+├── app.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 
-## Run in VS Code (Windows)
-1. Install Python 3.10 or later.
-2. Open this folder in VS Code.
-3. In the terminal, run:
-   ```powershell
-   py -m venv .venv
-   .venv\\Scripts\\Activate.ps1
-   python -m pip install -r requirements.txt
-   python app.py
-   ```
-   If PowerShell activation is blocked, run `.venv\\Scripts\\python.exe -m pip install -r requirements.txt` and `.venv\\Scripts\\python.exe app.py`.
-4. Open `http://127.0.0.1:5000/`.
+Technologies Used
+Python
+Flask
+HTML and CSS
+Project Purpose
 
-## Run in an online coding platform
-Upload the files while preserving the `templates` and `static` folders. Install dependencies using `pip install -r requirements.txt` and run `python app.py`. Configure the platform to expose port 5000 if needed.
+This project explores multimodal AI tools through a web-based comparison application.
 
-## Scoring
-Each tested record has six criteria scored 0–5. Percentage = sum of scores / 30 × 100. Unavailable features are recorded separately and do not count as zero.
-
-## Important
-The app does not call provider APIs or automatically run experiments. Test the tools manually and enter real observations. Avoid private or confidential materials.
+Capstone 57 Project
